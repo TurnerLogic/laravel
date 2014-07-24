@@ -43,6 +43,19 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
+	| Application Local Timezone
+	|--------------------------------------------------------------------------
+	|
+	| Any model-aware date/times will be converted to the local timezone
+	| specified here when retrieved via a model instance. This way you can
+	| store in UTC, but display in a local timezone.
+	|
+	*/
+
+	'local_timezone' => 'America/Chicago',
+
+	/*
+	|--------------------------------------------------------------------------
 	| Application Locale Configuration
 	|--------------------------------------------------------------------------
 	|
