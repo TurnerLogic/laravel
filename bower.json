@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "dependencies": {
     "bootstrap": "~3.2.0",
-    "jquery": "1.11.x"
+    "jquery": "1.11.x",
+    "bootswatch": "3.2.x",
+    "html5shiv": "~3.7.0",
+    "respond": "~1.4.2"
   },
   "ignore": [
     "**/.*",
