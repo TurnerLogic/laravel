@@ -88,3 +88,18 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+/*
+|--------------------------------------------------------------------------
+| Register Custom Validation Class
+|--------------------------------------------------------------------------
+|
+| Easily add additional validation rules by adding methods to the
+| CustomValidator class in the app/custom directory. 
+|
+*/
+
+Validator::resolver(function($translator, $data, $rules, $messages)
+{
+    return new CustomValidator($translator, $data, $rules, $messages);
+});
