@@ -4,7 +4,8 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"fzaninotto/faker": "v1.3.0"
 	},
 	"autoload": {
 		"classmap": [
@@ -32,5 +33,9 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "stable",
+	"require-dev": {
+	    "way/generators": "2.*",
+	    "phpunit/phpunit": "4.0.*"
+	}
 }
