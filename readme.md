@@ -22,10 +22,14 @@ Documentation for the entire framework can be found on the [Laravel website](htt
 
 ### Merging Changes From Laravel/Laravel
 
+Use the commands below to merge changes from the upstream branch.
+
+```
 git remote add upstream https://github.com/laravel/laravel
 git fetch upstream
 git checkout master
 git merge upstream/master
+```
 
 ### License
 
