@@ -20,6 +20,13 @@ Documentation for the entire framework can be found on the [Laravel website](htt
 
 **All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
 
+### Merging Changes From Laravel/Laravel
+
+git remote add upstream https://github.com/laravel/laravel
+git fetch upstream
+git checkout master
+git merge upstream/master
+
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
