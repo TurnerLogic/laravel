@@ -57,24 +57,29 @@ App::error(function(Exception $exception, $code)
 	}
 	else
 	{
-		// only log exception message
-		Log::error($exception->getMessage());
+		$view = "errors.$code";
+		$log = false;
 
-		// show appropriate view
 		switch ($code)
 		{
 			case 403:
-				return Response::view('errors.403', array(), 403);
-
 			case 404:
-				return Response::view('errors.404', array(), 404);
-
+				$log = false;
+				break;
 			case 500:
-				return Response::view('errors.500', array(), 500);
-
+				$log = true;
+				break;
 			default:
-				return Response::view('errors.default', array('code' => $code), $code);
+				$log = true;
+				$view = "errors.default";
 		}
+
+		if ($log)
+		{
+			Log::error("App::error() handling code $code with exception: " . $exception->getMessage());
+		}
+
+		return Response::view($view, array('code' => $code), $code);
 	}
 });
 
